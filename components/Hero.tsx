@@ -4,6 +4,17 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+/**
+ * Hero Component
+ *
+ * The main introductory section of the website.
+ * Features a parallax scrolling effect where the background image moves at a different speed than the foreground content.
+ *
+ * Animations:
+ * - Parallax background: Driven by `useScroll` and `useTransform`.
+ * - Text reveals: Staggered fade-in and slide-up animations for the title and subtitle.
+ * - Scroll indicator: A pulsing line animation at the bottom.
+ */
 export default function Hero() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -11,7 +22,9 @@ export default function Hero() {
         offset: ["start start", "end start"],
     });
 
+    // Parallax effect: moves the background image down as user scrolls
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    // Opacity fade: fades out the background image as user scrolls
     const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (

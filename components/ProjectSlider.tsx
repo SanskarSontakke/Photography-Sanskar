@@ -5,6 +5,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
+/**
+ * Projects Data
+ * Configuration for the slider items.
+ */
 const projects = [
     { id: 1, title: "Fashion", count: "200", image: "/images/gallery-1.png" },
     { id: 2, title: "Portrait", count: "350", image: "/images/gallery-5.png" },
@@ -12,6 +16,17 @@ const projects = [
     { id: 4, title: "Nature", count: "500", image: "/images/gallery-4.png" },
 ];
 
+/**
+ * ProjectSlider Component
+ *
+ * An interactive slider that showcases different photography categories (Fashion, Portrait, etc.).
+ *
+ * Features:
+ * - Next/Prev controls to cycle through projects.
+ * - Large background typography that changes with the slide (using `AnimatePresence`).
+ * - Image fade/slide transition.
+ * - Circular loop navigation (going prev from first slide goes to last, etc.).
+ */
 export default function ProjectSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -31,6 +46,7 @@ export default function ProjectSlider() {
             </div>
 
             <div className="relative max-w-7xl mx-auto px-6 h-[500px] flex items-center justify-center">
+                {/* Image Container with AnimatePresence for exit animations */}
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentIndex}
@@ -59,7 +75,7 @@ export default function ProjectSlider() {
                     </motion.div>
                 </AnimatePresence>
 
-                {/* Typography Decoration */}
+                {/* Typography Decoration - Background Text */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 hidden md:block mix-blend-difference text-white">
                     <AnimatePresence mode="wait">
                         <motion.h3
@@ -75,7 +91,7 @@ export default function ProjectSlider() {
                     </AnimatePresence>
                 </div>
 
-                {/* Controls */}
+                {/* Navigation Controls */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-12 md:bottom-auto md:top-1/2 md:w-full md:justify-between px-4 z-30">
                     <button onClick={prevSlide} className="group flex items-center gap-2 text-sm uppercase tracking-widest hover:text-gray-600 transition-colors">
                         Prev <div className="h-px w-8 bg-black group-hover:bg-gray-600 transition-colors" />

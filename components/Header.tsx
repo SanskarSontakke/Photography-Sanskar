@@ -4,6 +4,18 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+/**
+ * Header Component
+ *
+ * Displays the main navigation bar at the top of the page.
+ * Uses Framer Motion for an entrance animation (fades in and slides down).
+ *
+ * Features:
+ * - Logo/Brand name linking to home
+ * - Desktop navigation links (WORK, ABOUT, CONTACT)
+ * - Mobile menu button (visual only in this iteration)
+ * - Responsive design
+ */
 export default function Header() {
     return (
         <motion.header

@@ -3,6 +3,12 @@
 
 import { Quote } from "lucide-react";
 
+/**
+ * Testimonials Component
+ *
+ * Displays client testimonials to build trust and credibility.
+ * Currently displays a static testimonial but designed to be extendable to a slider.
+ */
 export default function Testimonials() {
   return (
     <section className="py-24 px-6 md:px-12 bg-white text-black border-t border-gray-100">
@@ -25,9 +31,9 @@ export default function Testimonials() {
              
              <div className="max-w-3xl">
                 <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-600 mb-8">
-                   "Happ Space Studio was great to work with. I don't love being in front of the camera 
-                   (I'd rather art direct from behind!) but I was at ease with Happ Space Studio and the 
-                   results show it! I now have a photo of myself that I love!"
+                   &quot;Happ Space Studio was great to work with. I don&apos;t love being in front of the camera
+                   (I&apos;d rather art direct from behind!) but I was at ease with Happ Space Studio and the
+                   results show it! I now have a photo of myself that I love!&quot;
                 </p>
                 
                 {/* Decorative / Placeholder for person image if needed later */}
