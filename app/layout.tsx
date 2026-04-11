@@ -1,7 +1,7 @@
-
 import { Oswald, Open_Sans } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import { SmoothScroller } from "@/components/animations/SmoothScroller";
 
 /**
  * Font Configuration
@@ -43,7 +43,9 @@ export default function RootLayout({
         className={`${oswald.variable} ${openSans.variable} antialiased bg-black text-white`}
       >
         <CustomCursor />
-        {children}
+        <SmoothScroller>
+          {children}
+        </SmoothScroller>
       </body>
     </html>
   );
