@@ -4,6 +4,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+/**
+ * ValueSection Component
+ *
+ * Displays the core values and philosophy of the studio.
+ * Layout consists of a split view: Image/Text on the left, Content card on the right.
+ *
+ * Animations:
+ * - Slide-in effects from left and bottom when scrolled into view.
+ */
 export default function ValueSection() {
     return (
         <section className="bg-zinc-900 text-white relative py-24 md:py-32 overflow-hidden">

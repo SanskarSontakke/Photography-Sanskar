@@ -4,6 +4,17 @@
 import { ArrowRight, ArrowUp } from "lucide-react";
 import Link from "next/link";
 
+/**
+ * ContactSection Component
+ *
+ * Acts as the primary footer and contact call-to-action area.
+ *
+ * Features:
+ * - "Get In Touch" heading and email link.
+ * - Hover animation on the email arrow.
+ * - Scroll-to-top button.
+ * - Social media links.
+ */
 export default function ContactSection() {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -31,7 +42,7 @@ export default function ContactSection() {
 
 
                         <p className="text-xs text-gray-500 mt-8 max-w-xs">
-                            If you want to work with us, book now, or just say hello, so let's chat!
+                            If you want to work with us, book now, or just say hello, so let&apos;s chat!
                         </p>
                     </div>
                 </div>

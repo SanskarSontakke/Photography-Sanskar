@@ -2,9 +2,13 @@
 "use client";
 
 import Image from "next/image";
-import { Link2, Instagram, Twitter } from "lucide-react";
+import { Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 
+/**
+ * Team Data
+ * Information about team members including name, role, and image path.
+ */
 const team = [
     { name: "Royy Nielsenn", role: "Creative Director", image: "/images/team-1.png" },
     { name: "Anastasia River", role: "Head Photographer", image: "/images/team-2.png" },
@@ -12,6 +16,16 @@ const team = [
     { name: "Ella Annes", role: "Editor", image: "/images/team-4.png" },
 ];
 
+/**
+ * TeamSection Component
+ *
+ * Displays the profiles of key team members.
+ *
+ * Features:
+ * - Grid layout for team cards.
+ * - Hover effect: Image goes from grayscale to color.
+ * - Social icons overlay appears on hover.
+ */
 export default function TeamSection() {
     return (
         <section className="py-24 px-6 md:px-12 bg-white text-black">

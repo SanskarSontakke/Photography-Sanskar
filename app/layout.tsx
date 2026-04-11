@@ -3,6 +3,10 @@ import { Oswald, Open_Sans } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 
+/**
+ * Font Configuration
+ * Using Oswald for headings and Open Sans for body text to achieve the desired aesthetic.
+ */
 const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
@@ -18,6 +22,16 @@ export const metadata = {
   description: "High-end creative photography portfolio.",
 };
 
+/**
+ * RootLayout Component
+ *
+ * This is the global layout wrapper for the Next.js application.
+ * It applies global font variables, CSS styles, and includes the CustomCursor component
+ * that persists across the application.
+ *
+ * @param {Object} props - The component props
+ * @param {React.ReactNode} props.children - The child components to be rendered within the layout
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

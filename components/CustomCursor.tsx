@@ -4,6 +4,18 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+/**
+ * CustomCursor Component
+ *
+ * Replaces the default system cursor with a custom styled element that follows the mouse.
+ * It changes state (size and color) when hovering over interactive elements (links, buttons).
+ *
+ * Features:
+ * - Follows mouse position using `mousemove` event listener.
+ * - Detects hover over interactive elements using `mouseover` event delegation.
+ * - Scales up and changes color on hover.
+ * - Hidden on touch devices (via CSS `hidden md:block`).
+ */
 export default function CustomCursor() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
@@ -15,6 +27,7 @@ export default function CustomCursor() {
 
         const mouseOver = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
+            // Check if the target or its parent is a link or button
             if (target.tagName.toLowerCase() === 'a' || target.tagName.toLowerCase() === 'button' || target.closest('a') || target.closest('button')) {
                 setIsHovering(true);
             } else {

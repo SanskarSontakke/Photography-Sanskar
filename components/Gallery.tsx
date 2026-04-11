@@ -4,6 +4,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+/**
+ * Categories Data
+ * Configuration for the gallery grid items, including span size for layout variety.
+ */
 const categories = [
     { name: "Wedding", image: "/images/gallery-2.png", colSpan: "md:col-span-2", rowSpan: "md:row-span-2" },
     { name: "Cinematic", image: "/images/gallery-3.png", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
@@ -12,6 +16,17 @@ const categories = [
     { name: "Fashion", image: "/images/gallery-1.png", colSpan: "md:col-span-1", rowSpan: "md:row-span-1" },
 ];
 
+/**
+ * Gallery Component
+ *
+ * Displays a bento-grid style gallery of selected works.
+ *
+ * Features:
+ * - Responsive grid layout using CSS Grid.
+ * - Varied item sizes (some span 2 columns/rows) to create visual interest.
+ * - Hover effects: Image scale and title reveal.
+ * - Entrance animation: Staggered fade-in for each item.
+ */
 export default function Gallery() {
     return (
         <section id="work" className="py-24 px-4 md:px-12 bg-black text-white">
