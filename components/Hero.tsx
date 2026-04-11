@@ -1,8 +1,8 @@
-
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { TextReveal } from "./animations/TextReveal";
 
 /**
  * Hero Component
@@ -23,7 +23,7 @@ export default function Hero() {
     });
 
     // Parallax effect: moves the background image down as user scrolls
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
     // Opacity fade: fades out the background image as user scrolls
     const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
@@ -32,43 +32,30 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <motion.div
                     style={{ y, opacity }}
-                    initial={{ scale: 1.2 }}
+                    initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    transition={{ duration: 2, ease: [0.21, 0.47, 0.32, 0.98] }}
                     className="w-full h-full bg-[url('/images/gallery-1.png')] bg-cover bg-center brightness-50"
                 />
             </div>
 
             <div className="z-10 text-center px-4 mix-blend-difference">
-                <motion.h1
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                    className="text-6xl md:text-9xl font-bold uppercase tracking-tighter leading-none font-oswald mb-4"
-                >
-                    <motion.span
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                        className="inline-block"
-                    >
+                <h1 className="text-6xl md:text-9xl font-bold uppercase tracking-tighter leading-none font-oswald mb-4">
+                    <TextReveal delay={0.2}>
                         Sanskar
-                    </motion.span>
+                    </TextReveal>
                     <br className="md:hidden" />
-                    <motion.span
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                        className="inline-block md:ml-6"
-                    >
-                        Sontakke
-                    </motion.span>
-                </motion.h1>
+                    <span className="inline-block md:ml-6">
+                        <TextReveal delay={0.4}>
+                            Sontakke
+                        </TextReveal>
+                    </span>
+                </h1>
 
                 <motion.p
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 1, delay: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
                     className="text-lg md:text-2xl tracking-[0.5em] uppercase text-gray-300 font-light"
                 >
                     Photography
