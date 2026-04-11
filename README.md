@@ -122,4 +122,4 @@ The easiest way to deploy this Next.js app is to use the [Vercel Platform](https
 
 ---
 
-© 2024 Sanskar Sontakke Photography. All Rights Reserved.
+© 2026 Sanskar Sontakke Photography. All Rights Reserved.
