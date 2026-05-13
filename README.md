@@ -6,7 +6,7 @@ A high-end, creative photography portfolio website designed to showcase visual w
 
 ## 🎬 Demo Video
 
-(https://github.com/user-attachments/assets/e3db4c45-8481-40e5-9949-0ecc8dde5a29)
+https://github.com/user-attachments/assets/e3db4c45-8481-40e5-9949-0ecc8dde5a29
 
 ## 📋 Table of Contents
 
