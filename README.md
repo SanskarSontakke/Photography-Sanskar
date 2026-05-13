@@ -5,13 +5,8 @@
 A high-end, creative photography portfolio website designed to showcase visual work with elegance and interactivity. Built with **Next.js 15**, **Tailwind CSS v4**, and **Framer Motion**, this project features smooth animations, a custom cursor, and a modern dark-mode aesthetic.
 
 ## 🎬 Demo Video
-<video src="/photography-sanskar.mp4" autoplay loop muted playsinline width="100%" style="max-width:900px; display:block; margin:0 auto;">
-  Your browser does not support the video tag.
-</video>
 
-- [Open the demo video directly](public/photography-sanskar.mp4)
-
-> Note: Some markdown viewers may not render local video playback inline, but the file is included and configured to autoplay and loop.
+https://github.com/user-attachments/assets/5a058bee-6930-4580-b993-097e1f65a440
 
 ## 📋 Table of Contents
 
