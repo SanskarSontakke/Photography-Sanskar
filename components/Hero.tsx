@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { TextReveal } from "./animations/TextReveal";
+import Logo from "@/components/Logo";
 
 /**
  * Hero Component
@@ -39,14 +40,23 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="z-10 text-center px-4 mix-blend-difference">
+            <div className="z-10 text-center px-4 mix-blend-difference flex flex-col items-center">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                    animate={{ opacity: 0.9, scale: 1, rotate: 0 }}
+                    transition={{ duration: 1.2, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+                    className="mb-8 hover:scale-105 transition-transform duration-500 cursor-pointer"
+                >
+                    <Logo variant="icon" theme="dark" iconSize={80} />
+                </motion.div>
+
                 <h1 className="text-6xl md:text-9xl font-bold uppercase tracking-tighter leading-none font-oswald mb-4">
-                    <TextReveal delay={0.2}>
+                    <TextReveal delay={0.4}>
                         Sanskar
                     </TextReveal>
                     <br className="md:hidden" />
                     <span className="inline-block md:ml-6">
-                        <TextReveal delay={0.4}>
+                        <TextReveal delay={0.6}>
                             Sontakke
                         </TextReveal>
                     </span>
@@ -55,7 +65,7 @@ export default function Hero() {
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
+                    transition={{ duration: 1, delay: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
                     className="text-lg md:text-2xl tracking-[0.5em] uppercase text-gray-300 font-light"
                 >
                     Photography

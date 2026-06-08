@@ -2,6 +2,7 @@ import { Oswald, Open_Sans } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import { SmoothScroller } from "@/components/animations/SmoothScroller";
+import { Analytics } from "@vercel/analytics/react";
 
 /**
  * Font Configuration
@@ -20,6 +21,9 @@ const openSans = Open_Sans({
 export const metadata = {
   title: "Sanskar Sontakke | Photography",
   description: "High-end creative photography portfolio.",
+  verification: {
+    google: "Yb3BIIOgMElzyIq-tP-RSQHFke8Dfc9v6lBQKyJiuR0",
+  },
 };
 
 /**
@@ -46,6 +50,7 @@ export default function RootLayout({
         <SmoothScroller>
           {children}
         </SmoothScroller>
+        <Analytics />
       </body>
     </html>
   );

@@ -50,8 +50,8 @@ export default function Gallery() {
                             fill
                             className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex items-center justify-center">
-                             <h3 className="text-3xl font-bold font-oswald uppercase tracking-wider translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 ease-out flex items-end md:items-center justify-start md:justify-center p-6 md:p-0">
+                             <h3 className="text-xl md:text-3xl font-bold font-oswald uppercase tracking-wider text-white translate-y-0 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out">
                                 {cat.name}
                             </h3>
                         </div>

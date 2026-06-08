@@ -7,7 +7,7 @@ import { motion, AnimatePresence, PanInfo } from "framer-motion";
 const testimonials = [
     {
         id: 1,
-        text: "Happ Space Studio was great to work with. I don't love being in front of the camera (I'd rather art direct from behind!) but I was at ease with Happ Space Studio and the results show it! I now have a photo of myself that I love!",
+        text: "Sanskar Sontakke Photography was great to work with. I don't love being in front of the camera (I'd rather art direct from behind!) but I was at ease with Sanskar Sontakke and the results show it! I now have a photo of myself that I love!",
         author: "Abigail Candra",
         role: "Professional Model"
     },

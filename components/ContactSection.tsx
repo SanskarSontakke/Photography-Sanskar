@@ -3,6 +3,7 @@
 
 import { ArrowRight, ArrowUp } from "lucide-react";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 /**
  * ContactSection Component
@@ -47,16 +48,22 @@ export default function ContactSection() {
                     </div>
                 </div>
 
+                {/* Logo & Divider */}
+                <div className="flex flex-col items-center justify-center mb-12 border-t border-gray-850 pt-12">
+                    <Logo variant="stacked" theme="dark" iconSize={64} />
+                </div>
+
                 {/* Bottom Footer */}
                 <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-800">
-                    <p className="text-xs text-gray-500 uppercase tracking-widest mb-4 md:mb-0">
-                        © {new Date().getFullYear()} Sanskar Sontakke Gallery
+                    <p className="text-xs text-gray-550 uppercase tracking-widest mb-4 md:mb-0">
+                        © {new Date().getFullYear()} Sanskar Sontakke Photography. All Rights Reserved.
                     </p>
 
                     {/* Scroll Top Button */}
                     <button
                         onClick={scrollToTop}
-                        className="p-4 border border-gray-700 rounded-full hover:bg-white hover:text-black transition-all duration-300 mb-4 md:mb-0 md:-translate-y-12"
+                        className="p-4 border border-gray-700 rounded-full hover:bg-white hover:text-black transition-all duration-300 mb-4 md:mb-0 md:-translate-y-12 cursor-pointer"
+                        aria-label="Scroll to top"
                     >
                         <ArrowUp className="w-6 h-6" />
                     </button>

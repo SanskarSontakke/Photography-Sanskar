@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 270" width="100%" height="100%">
+  <!-- Icon Group -->
+  <g transform="translate(0, 5)">
+    <!-- Outer circle in Dark Blue -->
+    <circle cx="100" cy="100" r="88" fill="none" stroke="#0B2545" stroke-width="7" />
+    
+    <!-- Camera body outline in Gold -->
+    <path d="M 62 76 
+             C 62 71, 66 67, 71 67 
+             H 85 
+             L 91 58 
+             H 109 
+             L 115 67 
+             H 129 
+             C 134 67, 138 71, 138 76 
+             V 124 
+             C 138 129, 134 133, 129 133 
+             H 71 
+             C 66 133, 62 129, 62 124 
+             Z" 
+          fill="none" 
+          stroke="#C5A059" 
+          stroke-width="4.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+          
+    <!-- Camera flash/dot on top right -->
+    <circle cx="125" cy="77" r="3" fill="#C5A059" />
+    
+    <!-- Lotus flower in Gold -->
+    <g>
+      <!-- Bottom center petal pointing down -->
+      <path d="M 100 110 C 96 122, 93 129, 100 137 C 107 129, 104 122, 100 110 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Bottom left petal pointing down-left -->
+      <path d="M 94 110 C 86 117, 78 123, 85 130 C 93 126, 94 118, 94 110 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Bottom right petal pointing down-right -->
+      <path d="M 106 110 C 114 117, 122 123, 115 130 C 107 126, 106 118, 106 110 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Left outer petal pointing left-up -->
+      <path d="M 84 100 C 65 101, 58 89, 72 82 C 78 89, 82 95, 84 100 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Right outer petal pointing right-up -->
+      <path d="M 116 100 C 135 101, 142 89, 128 82 C 122 89, 118 95, 116 100 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Left inner petal pointing up-left -->
+      <path d="M 91 104 C 78 95, 76 80, 87 73 C 89 82, 91 94, 91 104 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Right inner petal pointing up-right -->
+      <path d="M 109 104 C 122 95, 124 80, 113 73 C 111 82, 109 94, 109 104 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Center top petal pointing straight up -->
+      <path d="M 100 105 C 92 92, 90 77, 100 61 C 110 77, 108 92, 100 105 Z" fill="none" stroke="#C5A059" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+      
+      <!-- Lens/aperture outer circle -->
+      <circle cx="100" cy="98" r="20" fill="#ffffff" stroke="#C5A059" stroke-width="4.5" />
+      <!-- Lens/aperture inner circle -->
+      <circle cx="100" cy="98" r="13" fill="#C5A059" />
+      <!-- Lens highlight/reflection crescent -->
+      <path d="M 99 90.5 A 7.5 7.5 0 0 1 106.5 98 A 5.5 5.5 0 0 0 99 90.5 Z" fill="#ffffff" />
+    </g>
+  </g>
+
+  <!-- Typography elements matching the design -->
+  <text x="100" y="212" font-family="'Oswald', sans-serif" font-size="19" font-weight="600" fill="#0B2545" text-anchor="middle" letter-spacing="4">PHOTOGRAPHY</text>
+  <text x="100" y="240" font-family="'Oswald', sans-serif" font-size="28" font-weight="700" fill="#C5A059" text-anchor="middle" letter-spacing="2.5">SANSKAR</text>
+  <text x="100" y="258" font-family="'Open Sans', sans-serif" font-size="8.5" font-weight="500" fill="#0B2545" text-anchor="middle" letter-spacing="2">CAPTURING LIFE'S HERITAGE</text>
+</svg>

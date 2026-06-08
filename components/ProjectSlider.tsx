@@ -73,14 +73,14 @@ export default function ProjectSlider() {
 
     return (
         <section className="py-24 bg-gray-100 text-black overflow-hidden relative">
-            <div className="text-center mb-16 relative z-20">
+            <div className="text-center mb-12 relative z-20">
                 <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Photo</span>
                 <h2 className="text-4xl md:text-5xl font-oswald font-bold uppercase mt-2">Most Popular</h2>
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 h-[500px] flex items-center justify-center">
+            <div className="relative max-w-7xl mx-auto px-6 flex flex-col items-center justify-center min-h-[400px] md:h-[500px]">
                 {/* Image Container with AnimatePresence for exit animations */}
-                <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+                <div className="relative w-full h-[360px] md:h-[500px] flex items-center justify-center overflow-hidden">
                     <AnimatePresence initial={false} custom={direction} mode="popLayout">
                         <motion.div
                             key={currentIndex}
@@ -98,10 +98,20 @@ export default function ProjectSlider() {
                             dragConstraints={{ left: 0, right: 0 }}
                             dragElastic={1}
                             onDragEnd={handleDragEnd}
-                            className="absolute flex flex-col md:flex-row items-center gap-12 w-full justify-center z-20 cursor-grab active:cursor-grabbing"
+                            className="absolute flex flex-col items-center justify-center z-20 cursor-grab active:cursor-grabbing w-full h-full"
                         >
+                            {/* Mobile Title (Hidden on desktop) */}
+                            <div className="md:hidden text-center mb-4 select-none">
+                                <h3 className="text-2xl font-bold font-oswald uppercase tracking-wider leading-none">
+                                    {projects[currentIndex].title}
+                                </h3>
+                                <span className="text-[10px] text-zinc-500 tracking-widest mt-1 block">
+                                    {projects[currentIndex].count} PHOTOGRAPHS
+                                </span>
+                            </div>
+
                             {/* Large Image */}
-                            <div className="relative w-full md:w-[400px] h-[500px] shadow-2xl group">
+                            <div className="relative w-[280px] sm:w-[320px] md:w-[400px] h-[260px] sm:h-[300px] md:h-[450px] lg:h-[500px] shadow-2xl group flex-shrink-0">
                                 <Image
                                     src={projects[currentIndex].image}
                                     alt={projects[currentIndex].title}
@@ -110,8 +120,8 @@ export default function ProjectSlider() {
                                 />
 
                                 {/* View All Button on Image */}
-                                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
-                                    <MagneticButton className="bg-black text-white px-8 py-3 text-xs uppercase tracking-widest hover:bg-zinc-800 transition-colors whitespace-nowrap">
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
+                                    <MagneticButton className="bg-black text-white px-6 py-2.5 text-[10px] uppercase tracking-widest hover:bg-zinc-800 transition-colors whitespace-nowrap">
                                         View All
                                     </MagneticButton>
                                 </div>
@@ -137,12 +147,12 @@ export default function ProjectSlider() {
                 </div>
 
                 {/* Navigation Controls */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-12 md:bottom-auto md:top-1/2 md:w-full md:justify-between px-4 z-30 pointer-events-none">
-                    <MagneticButton onClick={() => paginate(-1)} className="pointer-events-auto group flex items-center gap-2 text-sm uppercase tracking-widest hover:text-gray-600 transition-colors p-4">
-                        Prev <div className="h-px w-8 bg-black group-hover:bg-gray-600 transition-colors" />
+                <div className="relative md:absolute md:top-1/2 md:-translate-y-1/2 md:left-0 md:translate-x-0 w-full flex justify-center md:justify-between gap-12 md:gap-0 px-4 mt-6 md:mt-0 z-30 pointer-events-none">
+                    <MagneticButton onClick={() => paginate(-1)} className="pointer-events-auto group flex items-center gap-2 text-xs uppercase tracking-widest hover:text-gray-600 transition-colors p-3">
+                        Prev <div className="h-px w-6 bg-black group-hover:bg-gray-600 transition-colors" />
                     </MagneticButton>
-                    <MagneticButton onClick={() => paginate(1)} className="pointer-events-auto group flex items-center gap-2 text-sm uppercase tracking-widest hover:text-gray-600 transition-colors p-4">
-                        <div className="h-px w-8 bg-black group-hover:bg-gray-600 transition-colors" /> Next
+                    <MagneticButton onClick={() => paginate(1)} className="pointer-events-auto group flex items-center gap-2 text-xs uppercase tracking-widest hover:text-gray-600 transition-colors p-3">
+                        <div className="h-px w-6 bg-black group-hover:bg-gray-600 transition-colors" /> Next
                     </MagneticButton>
                 </div>
             </div>
