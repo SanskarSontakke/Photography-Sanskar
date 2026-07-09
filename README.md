@@ -75,8 +75,8 @@ Follow these steps to get a local copy up and running.
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/sanskar-sontakke-photography.git
-    cd sanskar-sontakke-photography
+    git clone https://github.com/SanskarSontakke/Photography-Sanskar.git
+    cd Photography-Sanskar
     ```
 
 2.  **Install dependencies**:
@@ -126,4 +126,6 @@ The easiest way to deploy this Next.js app is to use the [Vercel Platform](https
 
 ---
 
-© 2026 Sanskar Sontakke Photography. All Rights Reserved.
+## License
+
+MIT © 2026 Sanskar Sontakke
